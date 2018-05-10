@@ -17,9 +17,21 @@ tf.app.flags.DEFINE_string("log_dir", ".", "Model directory where final model fi
 
 def main(_):
     # TODO: add your code here
+
+
     with tf.Session() as sess:
         welcome = sess.run(tf.constant("Hello, TensorFlow!"))
         print(welcome)
+      
+        #a = tf.constant(2.0, tf.float32)
+        #b=tf.constant(3.0)
+        #print(a,b)
+
+        a = tf.placeholder(tf.float32)
+        b=a*2
+        with tf.Session() as sess:
+            result = sess.run(b, feed_dict={a:23.0})
+            print (result)
     exit(0)
 
 
