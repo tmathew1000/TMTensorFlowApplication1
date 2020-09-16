@@ -1,0 +1,6 @@
+{
+	"name": "TMSelfHostedIR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
